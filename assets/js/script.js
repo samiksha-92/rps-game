@@ -19,6 +19,20 @@ function getComputerChoice() {
 
 }
 
+/**creating win, lose & draw function */
+function win() {
+    console.log("user wins")
+
+}
+
+function lose() {
+    console.log("user loses");
+}
+
+function draw() {
+    console.log("it's a draw");
+
+}
 
 /** comparing the userChoice and compChoice */
 function runGame(userChoice) {
@@ -27,20 +41,18 @@ function runGame(userChoice) {
         case "rs":
         case "pr":
         case "sp":
-            console.log("user wins");
-            /**win(); */
+            win()
             break;
         case "ps":
         case "rp":
         case "sr":
-            console.log("user loses");
-            /**  lose(); */
+            lose();
+
             break;
         case "rr":
         case "pp":
         case "ss":
-            console.log("its a draw");
-            /**  draw(); */
+            draw();
 
     }
 
