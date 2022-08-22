@@ -7,11 +7,12 @@ let compScore_span = document.getElementById("comp-score");
 let scoreBoard_div = document.querySelector(".score-board");
 let result_p = document.querySelector(".result > p");
 const rock_div = document.getElementById("r >img");
+
+/** May be removed before final submission 
 const paper_div = document.getElementById("p > img");
-const scissors_div = document.getElementById("s > img");
+const scissors_div = document.getElementById("s > img"); **/
 
 /**converting letters(r,p,s) into complete word. */
-
 function convertToWord(letter) {
     if (letter === "r") return "Rock";
     if (letter === "p") return "Paper";
@@ -31,7 +32,9 @@ function win(userChoice, computerChoice) {
     userScore++;
     userScore_span.innerHTML = userScore;
     compScore_span.innerHTML = compScore;
-    result_p.innerHTML = `${convertToWord(userChoice)} beats  ${convertToWord(computerChoice)}  .You win 🥳`;
+    let littleUser = "user".fontsize(3).sub();
+    let littleComp = "comp".fontsize(3).sub();
+    result_p.innerHTML = `${convertToWord(userChoice)} ${littleUser} beats  ${convertToWord(computerChoice)} ${littleComp}  .You win 🥳`;
 }
 
 function lose() {
@@ -43,7 +46,7 @@ function draw() {
 
 }
 
-/** comparing the userChoice and computerChoice */
+/** comparing the userChoice and computerChoice & calling win,lose or draw function */
 
 function runGame(userChoice) {
     let computerChoice = getComputerChoice();
