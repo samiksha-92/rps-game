@@ -34,12 +34,20 @@ function win(userChoice, computerChoice) {
     compScore_span.innerHTML = compScore;
     let littleUser = "user".fontsize(3).sub();
     let littleComp = "comp".fontsize(3).sub();
-    result_p.innerHTML = `${convertToWord(userChoice)} ${littleUser} beats  ${convertToWord(computerChoice)} ${littleComp}  .You win 🥳`;
+    result_p.innerHTML = `${convertToWord(userChoice)} ${littleUser} beats ${convertToWord(computerChoice)} ${littleComp}  .You win 🥳`;
 }
 
-function lose() {
-    console.log("user loses");
+function lose(userChoice, computerChoice) {
+    compScore++;
+    userScore_span.innerHTML = userScore;
+    compScore_span.innerHTML = compScore;
+    let littleUser = "user".fontsize(3).sub();
+    let littleComp = "comp".fontsize(3).sub();
+    result_p.innerHTML = `${convertToWord(computerChoice)} ${littleComp} beats ${convertToWord(userChoice)} ${littleUser}  .You lost 🙈`;
+    console.log("lost");
 }
+
+
 
 function draw() {
     console.log("it's a draw");
@@ -65,6 +73,7 @@ function runGame(userChoice) {
         case "pp":
         case "ss":
             draw(userChoice, computerChoice);
+
 
     }
 
