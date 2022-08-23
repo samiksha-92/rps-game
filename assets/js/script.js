@@ -44,15 +44,21 @@ function lose(userChoice, computerChoice) {
     let littleUser = "user".fontsize(3).sub();
     let littleComp = "comp".fontsize(3).sub();
     result_p.innerHTML = `${convertToWord(computerChoice)} ${littleComp} beats ${convertToWord(userChoice)} ${littleUser}  .You lost 🙈`;
-    console.log("lost");
+
+}
+
+
+
+function draw(userChoice, computerChoice) {
+    userScore_span.innerHTML = userScore;
+    compScore_span.innerHTML = compScore;
+    let littleUser = "user".fontsize(3).sub();
+    let littleComp = "comp".fontsize(3).sub();
+    result_p.innerHTML = `${convertToWord(userChoice)} ${littleUser} equals ${convertToWord(computerChoice)} ${littleComp}  .It's a draw ✌🏻`;
 }
 
 
 
-function draw() {
-    console.log("it's a draw");
-
-}
 
 /** comparing the userChoice and computerChoice & calling win,lose or draw function */
 
