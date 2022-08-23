@@ -96,3 +96,19 @@ h1 {
     padding: 20px;
 
 }
+
+.green-shadow {
+    border: 4px solid darkgreen;
+    box-shadow: 0 0 10px darkgreen;
+
+}
+
+.red-shadow {
+    border: 4px solid red;
+    box-shadow: 0 0 10px red;
+}
+
+.gray-shadow {
+    border: 4 px solid purple;
+    box-shadow: 0 0 10 px purple;
+}
