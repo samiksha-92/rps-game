@@ -2,11 +2,10 @@ let userScore = 0;
 let compScore = 0;
 
 /**Caching the DOM Elements for future use **/
-let userScore_span = document.getElementById("user-score");
-let compScore_span = document.getElementById("comp-score");
-let scoreBoard_div = document.querySelector(".score-board");
-let result_p = document.querySelector(".result > p");
-const rock_div = document.getElementById("r >img");
+let userScoreSpan = document.getElementById("user-score");
+let compScoreSpan = document.getElementById("comp-score");
+let result = document.querySelector(".result > p");
+
 
 /** May be removed before final submission 
 const paper_div = document.getElementById("p > img");
@@ -30,11 +29,11 @@ function getComputerChoice() {
 /** creating win, lose & draw function */
 function win(userChoice, computerChoice) {
     userScore++;
-    userScore_span.innerHTML = userScore;
-    compScore_span.innerHTML = compScore;
+    userScoreSpan.innerHTML = userScore;
+    compScoreSpan.innerHTML = compScore;
     let littleUser = "user".fontsize(3).sub();
     let littleComp = "comp".fontsize(3).sub();
-    result_p.innerHTML = `${convertToWord(userChoice)} ${littleUser} beats ${convertToWord(computerChoice)} ${littleComp}  .You win 🥳`;
+    result.innerHTML = `${convertToWord(userChoice)} ${littleUser} beats ${convertToWord(computerChoice)} ${littleComp}  .You win 🥳`;
     document.getElementById(userChoice).classList.add("green-shadow");
     setTimeout(function () {
         document.getElementById(userChoice).classList.remove("green-shadow");
@@ -45,11 +44,11 @@ function win(userChoice, computerChoice) {
 
 function lose(userChoice, computerChoice) {
     compScore++;
-    userScore_span.innerHTML = userScore;
-    compScore_span.innerHTML = compScore;
+    userScoreSpan.innerHTML = userScore;
+    compScoreSpan.innerHTML = compScore;
     let littleUser = "user".fontsize(3).sub();
     let littleComp = "comp".fontsize(3).sub();
-    result_p.innerHTML = `${convertToWord(computerChoice)} ${littleComp} beats ${convertToWord(userChoice)} ${littleUser}  .You lost 🙈`;
+    result.innerHTML = `${convertToWord(computerChoice)} ${littleComp} beats ${convertToWord(userChoice)} ${littleUser}  .You lost 🙈`;
     document.getElementById(userChoice).classList.add("red-shadow");
     setTimeout(function () {
         document.getElementById(userChoice).classList.remove("red-shadow");
@@ -62,16 +61,12 @@ function lose(userChoice, computerChoice) {
 
 
 function draw(userChoice, computerChoice) {
-    userScore_span.innerHTML = userScore;
-    compScore_span.innerHTML = compScore;
+    userScoreSpan.innerHTML = userScore;
+    compScoreSpan.innerHTML = compScore;
     let littleUser = "user".fontsize(3).sub();
     let littleComp = "comp".fontsize(3).sub();
-    result_p.innerHTML = `${convertToWord(userChoice)} ${littleUser} equals ${convertToWord(computerChoice)} ${littleComp}  .It's a draw ✌🏻`;
-    document.getElementById(userChoice).classList.add("gray-shadow");
-    setTimeout(function () {
-        document.getElementById(userChoice).classList.remove("gray-shadow");
+    result.innerHTML = `${convertToWord(userChoice)} ${littleUser} equals ${convertToWord(computerChoice)} ${littleComp}  .It's a draw ✌🏻`;
 
-    }, 1000);
 
 }
 
@@ -102,26 +97,4 @@ function runGame(userChoice) {
 
     }
 
-}
-
-/**Getting userChoice and passing the value to runGame function* - To be Deleted before final submission/
-function main() {
-
-    /**Adding event listeners to r,p,s divs */
-
-function main() {
-    rock_div.addEventListener("click", function () {
-        console.log("clicked");
-        runGame("r");
-    })
-
-    paper_div.addEventListener("click", function () {
-        console.log("clicked");
-        runGame("p");
-    })
-
-    scissors_div.addEventListener("click", function () {
-        console.log("clicked");
-        runGame("s");
-    })
 }
