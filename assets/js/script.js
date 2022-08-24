@@ -39,7 +39,7 @@ function win(userChoice, computerChoice) {
     setTimeout(function () {
         document.getElementById(userChoice).classList.remove("green-shadow");
 
-    }, 3000);
+    }, 1000);
 
 }
 
@@ -54,7 +54,7 @@ function lose(userChoice, computerChoice) {
     setTimeout(function () {
         document.getElementById(userChoice).classList.remove("red-shadow");
 
-    }, 3000);
+    }, 1000);
 
 
 }
@@ -71,7 +71,7 @@ function draw(userChoice, computerChoice) {
     setTimeout(function () {
         document.getElementById(userChoice).classList.remove("gray-shadow");
 
-    }, 3000);
+    }, 1000);
 
 }
 
@@ -97,6 +97,7 @@ function runGame(userChoice) {
         case "pp":
         case "ss":
             draw(userChoice, computerChoice);
+            break;
 
 
     }
