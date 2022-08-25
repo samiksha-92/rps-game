@@ -41,6 +41,21 @@ To keep things simple, the user can play as many turns as he/she wants and can r
 <img src = "assets/images/screenshots of rps features/restart button screenshot.png">
 
 
+# Testing
+
+The W3C Markup Validator, W3C CSS Validator Services and JShint were used to validate the code on this website.
+- <a href ="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsamiksha-92.github.io%2Frps-game%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en" target="_blank"> W3C Markup CSS Validator Results. There were 0 errors found with 1 warning.</a>
+- <a href = "https://validator.w3.org/nu/?doc=https%3A%2F%2Fsamiksha-92.github.io%2Frps-game%2F" target ="_blank"> W3C Markup HTML Validator Results. There were 0 errors found.</a>
+- No errors were found during the testing of Javascript code on <a href = "https://jshint.com/" target ="_blank"> JShint</a> However there were 17 warnings found upon testing. The following metrics were returned :
+1. There are 8 functions in this file.
+2. unction with the largest signature take 2 arguments, while the median is 1.
+3. Largest function has 8 statements in it, while the median is 3.
+4. The most complex function has a cyclomatic complexity value of 10 while the median is 1.
+
+
+
+
+
 
 
 
