@@ -7,10 +7,6 @@ let compScoreSpan = document.getElementById("comp-score");
 let result = document.querySelector(".result > p");
 
 
-/** May be removed before final submission 
-const paper_div = document.getElementById("p > img");
-const scissors_div = document.getElementById("s > img"); **/
-
 /**converting letters(r,p,s) into complete word. */
 function convertToWord(letter) {
     if (letter === "r") return "Rock";
@@ -69,8 +65,6 @@ function draw(userChoice, computerChoice) {
 
 
 }
-
-
 
 
 /** comparing the userChoice and computerChoice & calling win,lose or draw function */
