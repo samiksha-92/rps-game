@@ -36,8 +36,8 @@ To keep things simple, the user can play as many turns as he/she wants and can r
 <img src = "assets/images/screenshots of rps features/choices screenshot.png">
 
 - **Restart Game:**
-1. The purpose of this button is to provide a way to the user to end his game and start a new one.
-2. Once the user starts a new game, his/her score and the computer's score sets to 0 and a new game begins.
+1. The purpose of this button is to provide a way to the user to end his/her game and start a new one.
+2. Once the user starts a new game, his/her score and the computer's score set to 0 and a new game begins.
 <img src = "assets/images/screenshots of rps features/restart button screenshot.png">
 
 
@@ -45,12 +45,22 @@ To keep things simple, the user can play as many turns as he/she wants and can r
 
 The W3C Markup Validator, W3C CSS Validator Services and JShint were used to validate the code on this website.
 - <a href ="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsamiksha-92.github.io%2Frps-game%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en" target="_blank"> W3C Markup CSS Validator Results. There were 0 errors found with 1 warning.</a>
+- No media queries were used in css. However, the website is fully responsive across all devices. Testing has been done on the following devices :
+1. iPhone 12 Pro
+2. Pixel 5 
+3. Samsung Galaxy S8
+4. ipad Air
+5. ipad Mini
+6. MacBook Pro
 - <a href = "https://validator.w3.org/nu/?doc=https%3A%2F%2Fsamiksha-92.github.io%2Frps-game%2F" target ="_blank"> W3C Markup HTML Validator Results. There were 0 errors found.</a>
 - No errors were found during the testing of Javascript code on <a href = "https://jshint.com/" target ="_blank"> JShint</a> However there were 17 warnings found upon testing. The following metrics were returned :
 1. There are 8 functions in this file.
 2. function with the largest signature take 2 arguments, while the median is 1.
 3. Largest function has 8 statements in it, while the median is 3.
 4. The most complex function has a cyclomatic complexity value of 10 while the median is 1.
+- Lighthouse check was also run on the website to assess key performance areas. The results can be seen below
+<img src = "assets/images/lighthouse screenshot.png">
+
 
 
 
